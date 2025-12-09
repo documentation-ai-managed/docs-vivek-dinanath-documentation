@@ -1,0 +1,125 @@
+---
+title: Changelog
+description: Track the evolution of Vivek Dinanath Documentation through release notes and updates.
+---
+
+## Overview
+
+Vivek Dinanath Documentation provides a centralized space to organize your project docs. Review this changelog to stay updated on new features, improvements, and fixes. You access the latest version via npm or direct site updates.
+
+<Callout kind="info">
+  Check your current version with `npx vivedk-docs --version`. Upgrade regularly to benefit from the latest enhancements.
+</Callout>
+
+| Version | Date       | Key Changes                  |
+|---------|------------|------------------------------|
+| v1.2.0  | 2024-11-15 | UI improvements, bug fixes   |
+| v1.1.0  | 2024-10-20 | Enhanced collaboration       |
+| v1.0.0  | 2024-09-10 | Initial release              |
+
+## Recent Updates
+
+<Update label="2024-11-15" description="v1.2.0" tags={["improvement", "bugfix"]}>
+
+## Improvements
+
+- Enhanced search performance by 40% with optimized indexing.
+- Added dark mode toggle in the navigation bar.
+
+## Bug Fixes
+
+- Fixed markdown parsing errors for nested lists.
+- Resolved mobile responsiveness issues on documentation pages.
+
+</Update>
+
+<Update label="2024-10-20" description="v1.1.0" tags={["feature"]}>
+
+## New Features
+
+- Introduced real-time collaboration for shared docs.
+- Added version pinning for stable deployments.
+
+## Improvements
+
+- Streamlined sidebar navigation with collapsible sections.
+
+</Update>
+
+<Update label="2024-09-10" description="v1.0.0" tags={["feature"]}>
+
+## Initial Release
+
+- Core documentation hosting with MDX support.
+- Integrated search and table of contents generation.
+- Basic authentication for private spaces.
+
+</Update>
+
+## How to Upgrade
+
+Follow these steps to update your Vivek Dinanath Documentation instance.
+
+<Steps>
+  <Step title="Check Current Version" icon="info">
+    Run the version check command in your terminal.
+
+    ```bash
+    npx vivedk-docs --version
+    ```
+  </Step>
+  <Step title="Install Latest" icon="download">
+    Use your preferred package manager.
+
+    <CodeGroup tabs="npm,yarn,pnpm">
+      ```bash
+      npm install vivedk-docs@latest
+      ```
+      ```bash
+      yarn add vivedk-docs@latest
+      ```
+      ```bash
+      pnpm add vivedk-docs@latest
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Restart Server" icon="refresh-cw">
+    Rebuild and restart your documentation server.
+
+    ```bash
+    npm run docs:build
+    npm run docs:dev
+    ```
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Backup your `docs/` directory before upgrading to avoid data loss.
+</Callout>
+
+## Related Resources
+
+<Columns cols={3}>
+  <Card title="Quick Start" icon="book-open" href="/docs/quickstart">
+    Set up your first documentation space in minutes.
+  </Card>
+  <Card title="Customization" icon="settings" href="/docs/customize">
+    Tailor themes and layouts to match your brand.
+  </Card>
+  <Card title="API Reference" icon="code" href="/docs/api">
+    Integrate programmatically with our REST endpoints.
+  </Card>
+</Columns>
+
+<ExpandableGroup>
+  <Expandable title="View Changes by Category" default-open="false">
+    <Tabs>
+      <Tab title="Features" icon="star">
+        Explore all new capabilities across versions.
+      </Tab>
+      <Tab title="Bug Fixes" icon="bug">
+        Track resolved issues and stability updates.
+      </Tab>
+    </Tabs>
+  </Expandable>
+</ExpandableGroup>

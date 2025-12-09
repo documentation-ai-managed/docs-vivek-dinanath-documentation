@@ -1,0 +1,119 @@
+---
+title: Getting Started
+description: Quickly set up your documentation space and begin creating content with this step-by-step guide.
+---
+
+## Overview
+
+Set up your Vivek Dinanath Documentation space in minutes. Follow these steps to create an account, build your first document, and explore the dashboard. This guide uses simple instructions tailored for new users.
+
+<Callout kind="tip">
+  Brand your space with the color `#3B82F6` in settings for a professional look.
+</Callout>
+
+## Account Setup and Login
+
+Create your account and log in to access the dashboard.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://vivekdinanath.com/docs` and click **Sign Up**.
+
+    Enter your email, name, and password. Verify your email via the confirmation link sent to your inbox.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to the login page. Use your credentials to access the dashboard.
+  </Step>
+  <Step title="Two-Factor Authentication" icon="shield">
+    Enable 2FA in **Account > Security** for added protection.
+  </Step>
+</Steps>
+
+## Create Your First Document
+
+Build your initial document using the editor or import existing content.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit-3">
+    From the dashboard, click **New Document**.
+
+    Add a title like "My Project Guide", then use the WYSIWYG editor to insert headings, lists, and images. Preview changes with `Ctrl+P`.
+  </Tab>
+  <Tab title="Markdown" icon="code">
+    Select **New Markdown File** and name it `quickstart.mdx`.
+
+    Paste this template:
+
+    ````markdown
+    ```markdown
+    # Quickstart
+
+    Welcome to your doc.
+
+    ## Features
+    - Easy editing
+    - Real-time previews
+    ```
+    ````
+
+    Save and publish.
+  </Tab>
+  <Tab title="Import" icon="upload">
+    Drag and drop a `.mdx` file or use **Import > GitHub Repo**.
+
+    Connect your repo at `github.com/yourusername/project-docs`.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Embed docs in your app
+  import { DocsEmbed } from '@vivekdinanath/docs-sdk';
+
+  const embed = new DocsEmbed({
+    spaceId: 'your-space-id',
+    themeColor: '#3B82F6'
+  });
+  embed.render('#docs-container');
+  ```
+  ```python
+  # Python integration example
+  from vivek_docs import Client
+
+  client = Client(space_id='your-space-id')
+  docs = client.get_docs()
+  print(docs.title)
+  ```
+</CodeGroup>
+
+## Dashboard Navigation
+
+Explore key sections with these feature cards.
+
+<Columns cols={3}>
+  <Card title="Documents" icon="file-text" href="/docs">
+    Manage all your MDX files. Edit, delete, or organize into folders.
+  </Card>
+  <Card title="Settings" icon="settings" href="/settings">
+    Customize themes, set `#3B82F6` as primary color, and manage users.
+  </Card>
+  <Card title="Analytics" icon="bar-chart-3" href="/analytics">
+    Track views and engagement for your docs.
+  </Card>
+</Columns>
+
+<ExpandableGroup>
+  <Expandable title="Advanced Dashboard Tips" default-open="false">
+    Use search with `Ctrl+K` for quick navigation. Pin frequent docs to the sidebar.
+
+    | Feature       | Shortcut     | Description                  |
+    |---------------|--------------|------------------------------|
+    | New Doc       | `Ctrl+N`    | Create blank document        |
+    | Preview       | `Ctrl+P`    | Live preview mode            |
+    | Export        | `Ctrl+E`    | Download as PDF or HTML      |
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  Congratulations! Your documentation space is ready. Start adding content now.
+</Callout>

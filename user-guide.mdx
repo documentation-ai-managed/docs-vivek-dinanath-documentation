@@ -1,0 +1,112 @@
+---
+title: User Guide
+description: Learn how to effectively organize, edit, and manage your project documentation within the platform.
+---
+
+## Overview
+
+You use Vivek Dinanath Documentation to create structured, collaborative spaces for your projects. This guide covers adding content, organizing projects with folders, and sharing with teams. Start by navigating to your workspace dashboard to begin editing.
+
+<Callout kind="tip">
+  Enable version history in project settings to track changes automatically.
+</Callout>
+
+## Adding and Structuring Content
+
+Create new pages and structure them with Markdown and MDX components for rich documentation.
+
+<Steps>
+  <Step title="Create a New Page" icon="plus">
+    Click the `+ New Page` button in the sidebar. Enter a title like "API Reference" and select MDX format.
+  </Step>
+  <Step title="Add Headings and Text">
+    Use `## Heading` for sections. Write concise paragraphs in active voice.
+  </Step>
+  <Step title="Insert Components">
+    Add JSX components like `<Callout>` for notes. Preview changes live.
+  </Step>
+  <Step title="Save and Publish">
+    Hit `Publish` to make it live. Use `Save Draft` for unfinished work.
+  </Step>
+</Steps>
+
+Show code examples across languages using multi-tab blocks.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Fetch project data
+  const response = await fetch('/api/projects');
+  const projects = await response.json();
+  console.log(projects);
+  ```
+  ```python
+  # Fetch project data
+  import requests
+  response = requests.get('/api/projects')
+  projects = response.json()
+  print(projects)
+  ```
+</CodeGroup>
+
+## Project Organization and Folders
+
+Organize content hierarchically with folders to keep large projects manageable.
+
+<Columns cols={3}>
+  <Card title="Root Folders" icon="folder" href="#">
+    Store top-level docs like "User Guide" and "API".
+  </Card>
+  <Card title="Subfolders" icon="folders" href="#">
+    Nest sections: `guides/quickstart/`.
+  </Card>
+  <Card title="Search and Tags" icon="search" href="#">
+    Tag pages with `["feature", "guide"]` for quick filtering.
+  </Card>
+</Columns>
+
+| Folder Type | Use Case | Permissions |
+|-------------|----------|-------------|
+| Public     | Open docs | Read for all |
+| Private    | Internal  | Owner only  |
+| Shared     | Team      | Invite-only |
+
+## Collaboration and Sharing Options
+
+Invite teammates and control access levels.
+
+<Tabs>
+  <Tab title="Invite Users" icon="users">
+    Go to project settings > Members. Enter email addresses and select roles: `admin`, `editor`, `viewer`.
+
+    <CodeGroup tabs="CLI,UI">
+      ```bash
+      # Invite via CLI
+      vivek-docs invite user@example.com --role editor --project my-docs
+      ```
+      ```bash
+      # UI steps (already covered)
+      ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="Share Links" icon="share-2">
+    Generate public or password-protected links. Set expiration: `30 days`.
+
+    <Image
+      src="https://via.placeholder.com/800x400/3B82F6/white?text=Share+Link+Modal"
+      alt="Share link generation modal"
+      width="800"
+      height="400"
+    />
+  </Tab>
+  <Tab title="Version Control" icon="git-branch">
+    Enable Git sync for pull requests and merges.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Permissions" default-open="false">
+  Use role-based access: Admins manage folders, Editors add content, Viewers read only. Customize with `{permissions: {read: true, write: false}}`.
+</Expandable>
+
+<Callout kind="info">
+  Review audit logs in settings to track all changes and shares.
+</Callout>

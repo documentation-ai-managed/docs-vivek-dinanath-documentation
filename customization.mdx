@@ -1,0 +1,116 @@
+---
+title: Customization and Settings
+description: Tailor your documentation space to fit your needs using various configuration options and branding tools.
+---
+
+## Overview
+
+Customize Vivek Dinanath Documentation to match your brand and workflow. Apply custom colors, manage team permissions, and handle document exports or imports seamlessly. Start with your brand color `{#3B82F6}` for a cohesive look.
+
+<Callout kind="tip">
+  Save changes in the admin dashboard to apply them site-wide instantly.
+</Callout>
+
+## Brand Colors and Themes
+
+Set your primary brand color and additional theme options to personalize the interface.
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to **Admin > Workspace Settings** from the sidebar.
+  </Step>
+  <Step title="Update Colors" icon="palette">
+    Enter your hex code, such as `{#3B82F6}`, in the **Primary Color** field.
+  </Step>
+  <Step title="Preview and Save" icon="eye">
+    Preview the theme live, then click **Apply Changes**.
+  </Step>
+</Steps>
+
+Configure via the `config.yaml` file for advanced control:
+
+<CodeGroup tabs="YAML,JSON">
+```yaml
+brand:
+  primary: "#3B82F6"
+  secondary: "#1E40AF"
+  theme: "light"  # or "dark"
+```
+```json
+{
+  "brand": {
+    "primary": "#3B82F6",
+    "secondary": "#1E40AF",
+    "theme": "light"
+  }
+}
+```
+</CodeGroup>
+
+## Managing User Permissions
+
+Control access with role-based permissions. Assign roles to team members for read, edit, or admin capabilities.
+
+| Role       | Read | Edit | Delete | Admin |
+|------------|------|------|--------|-------|
+| Viewer     | ✅   | ❌   | ❌     | ❌    |
+| Editor     | ✅   | ✅   | ❌     | ❌    |
+| Admin      | ✅   | ✅   | ✅     | ✅    |
+
+<Tabs>
+  <Tab title="Invite Users" icon="users">
+    Go to **Team > Invites**, enter emails, and select roles from the dropdown.
+  </Tab>
+  <Tab title="Bulk Import" icon="upload">
+    Upload a CSV with columns: `email,role`. Sample:
+    
+    ```csv
+    email,role
+    user1@example.com,editor
+    user2@example.com,viewer
+    ```
+  </Tab>
+  <Tab title="Revoke Access" icon="x">
+    Select users in **Team** list and click **Remove**.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Permission Rules" default-open="false">
+  Use custom rules for granular control:
+  
+  ```yaml
+  permissions:
+    docs:
+      - path: "/private/*"
+        roles: ["admin"]
+  ```
+</Expandable>
+
+## Exporting and Importing Documents
+
+Export your docs as Markdown, PDF, or HTML. Import from other platforms easily.
+
+<Columns cols={3}>
+  <Card title="Export Options" icon="download" href="/docs/export">
+    Choose formats and download instantly.
+  </Card>
+  <Card title="Import Tools" icon="upload" href="/docs/import">
+    Supports MDX, Markdown, and ZIP archives.
+  </Card>
+  <Card title="Version History" icon="git-branch" href="/docs/versions">
+    Restore from exports during imports.
+  </Card>
+</Columns>
+
+<Steps>
+  <Step title="Export Docs" icon="file-down">
+    Select pages in **Docs > Export**, pick format, and generate.
+  </Step>
+  <Step title="Import Files" icon="file-up">
+    Drag files to **Docs > Import** or use the upload button.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+  Exports include frontmatter and images. Verify imports in preview mode.
+</Callout>

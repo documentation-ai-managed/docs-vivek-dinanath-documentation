@@ -1,0 +1,98 @@
+---
+title: Introduction to Vivek Dinanath Documentation
+description: Discover the essentials of Vivek Dinanath Documentation, a versatile platform designed for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+Vivek Dinanath Documentation provides a centralized space for you to organize, manage, and share all your project documentation. You can create structured pages, embed code examples, and collaborate seamlessly with your team. This platform supports rich MDX content, making your docs interactive and professional.
+
+<Columns cols={3}>
+  <Card title="Structured Organization" icon="folder-tree" href="/docs/organization">
+    Build hierarchical documentation with folders and pages for easy navigation.
+  </Card>
+  <Card title="Rich Content" icon="edit-3" href="/docs/content">
+    Use components like Steps, Tabs, and Cards to create engaging guides.
+  </Card>
+  <Card title="Collaboration" icon="users" href="/docs/collaboration">
+    Share docs with teams and track changes in real-time.
+  </Card>
+</Columns>
+
+## Key Features and Benefits
+
+You benefit from powerful features that streamline your documentation workflow.
+
+<Callout kind="tip">
+  Start small: Create your first page to experience the intuitive editor.
+</Callout>
+
+<Tabs>
+  <Tab title="Version Control" icon="git-branch">
+    Track changes with built-in Git integration. Every edit creates a commit you can revert or branch from.
+  </Tab>
+  <Tab title="Search and Navigation" icon="search">
+    Full-text search across all docs finds exactly what you need quickly.
+  </Tab>
+  <Tab title="Custom Domains" icon="globe">
+    Host your docs on a custom domain with SEO optimization for better discoverability.
+  </Tab>
+</Tabs>
+
+These features save you time and ensure your documentation stays up-to-date and accessible.
+
+## How to Get Started
+
+Follow these steps to set up your documentation space.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at the dashboard with your email. Verify your account to unlock full features.
+  </Step>
+  <Step title="Set Up Project" icon="plus">
+    Create a new project and import existing Markdown or MDX files.
+  </Step>
+  <Step title="Customize Theme" icon="palette">
+    Adjust colors and layouts. Use brand color `#3B82F6` for primary elements.
+  </Step>
+  <Step title="Publish" icon="rocket">
+    Deploy your site with one click and share the live URL.
+  </Step>
+</Steps>
+
+### Integrate with Your Workflow
+
+Embed documentation in your apps using simple API calls.
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  const response = await fetch('https://api.vivekdocs.com/v1/pages', {
+    headers: { Authorization: `Bearer ${YOUR_API_KEY}` }
+  });
+  const pages = await response.json();
+  console.log(pages);
+  ```
+  ```python
+  import requests
+  headers = {'Authorization': f'Bearer {YOUR_API_KEY}'}
+  response = requests.get('https://api.vivekdocs.com/v1/pages', headers=headers)
+  pages = response.json()
+  print(pages)
+  ```
+</CodeGroup>
+
+## Access Support
+
+<ExpandableGroup>
+  <Expandable title="Community Forum" default-open="true">
+    Join discussions on our forum for peer support and feature requests.
+  </Expandable>
+  <Expandable title="Documentation">
+    Explore full guides at `/docs/advanced`.
+  </Expandable>
+  <Expandable title="Contact Support">
+    Email support@vivekdocs.com for premium assistance.
+  </Expandable>
+</ExpandableGroup>
+
+You now have everything to build efficient documentation. Start creating today!
